@@ -53,6 +53,10 @@ app.all('/', function(req, res, next) {
   next();
  });
 
+app.get('/',function(req, res){
+  res.send("hello")
+})
+
 app.use('/bank',bank)
 app.use('/branch',branch)
 
