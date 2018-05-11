@@ -1,13 +1,13 @@
 {
-  "name": "DMS",
+  "name": "Bankservice",
   "version": "1.0.0",
-  "description": "Doctor Management System",
+  "description": "service",
   "main": "index.js",
   "scripts": {
     "start": "supervisor app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shreyas Mattur",
+  "author": "Sumana",
   "license": "ISC",
   "dependencies": {
     "@google/maps": "^0.3.1",
