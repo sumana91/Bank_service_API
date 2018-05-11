@@ -29,10 +29,10 @@ router.get('/', function(req,res, next){
         Branch
         .fetchAll()
         .then(function (collection) {
-          res.json({error: false, data: collection.toJSON()});
+          res.json({data: collection.toJSON()});
         })
         .catch(function (err) {
-          res.status(500).json({error: true, data: {message: err.message}});
+          res.status(500).json({data: {message: err.message}});
         });
 })
 
