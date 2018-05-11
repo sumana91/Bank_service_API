@@ -7,9 +7,7 @@ var passport = require('passport')
 var port = process.env.PORT || 8899
 
 //Controllers
-var bank = require('./controllers/bankcontroller');
 var branch = require('./controllers/branchcontroller');
-
 
 var app = express();
 
@@ -24,14 +22,10 @@ app.set('view engine', 'html');
 app.use(logger('dev'))
 app.use(bodyParser.json(bodyParser.urlencoded({ extended: false})))
 app.use(cookieParser())
-//app.use(express.bodyParser());
 app.use(express.static(path.join(__dirname, 'static_files')))
 
 // Add headers
 app.use(function (req, res, next) {
-
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', '*');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -53,11 +47,12 @@ app.all('/', function(req, res, next) {
   next();
  });
 
+
 app.get('/',function(req, res){
   res.send("Hello, Welcome to Bank Service")
 })
 
-app.use('/bank',bank)
+
 app.use('/branch',branch)
 
 app.listen(port, function (){
