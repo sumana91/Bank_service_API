@@ -54,7 +54,7 @@ app.all('/', function(req, res, next) {
  });
 
 app.get('/',function(req, res){
-  res.send("hello")
+  res.send("Hello, Welcome to Bank Service")
 })
 
 app.use('/bank',bank)
