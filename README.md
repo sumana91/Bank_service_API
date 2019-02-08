@@ -21,5 +21,5 @@ Application to do CRUD operations on a bank system using Nodejs and Postgresql.
 - Run the script by `node app.js`
 
 ### Endpoint
-- \branch : GET all the branch details.
-- \branch\:ifsc : GET the branch details based on the ifsc code given
+- `\branch` : GET all the branch details.
+- `\branch\:ifsc` : GET the branch details based on the ifsc code given
